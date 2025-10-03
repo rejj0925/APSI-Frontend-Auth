@@ -1,23 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+// src/App.js
+import React from "react";
+import Register from "./components/Register";
+import Login from "./components/Login";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={{ maxWidth: "400px", margin: "50px auto", fontFamily: "Arial" }}>
+      <h1>User Auth System (Custom Supabase Table)</h1>
+      <div style={{ border: "1px solid #ccc", padding: "20px", marginBottom: "20px" }}>
+        <Register />
+      </div>
+      <div style={{ border: "1px solid #ccc", padding: "20px" }}>
+        <Login />
+      </div>
     </div>
   );
 }
