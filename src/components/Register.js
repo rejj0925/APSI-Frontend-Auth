@@ -21,14 +21,18 @@ export default function Register() {
 
   return (
     <div>
-      <h2>Register</h2>
-      <form onSubmit={handleSubmit} style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
-        <input name="username" placeholder="Username" onChange={handleChange} />
-        <input name="email" placeholder="Email" onChange={handleChange} />
-        <input type="password" name="password" placeholder="Password" onChange={handleChange} />
-        <button type="submit">Register</button>
+      <form onSubmit={handleSubmit}  className="flex flex-col gap-3">
+        <h2 className="text-2xl font-bold text-yellow-200 self-center">Register</h2>
+        <div className="mx-auto items-center flex flex-col gap-3">
+          <input name="username" placeholder="Username" onChange={handleChange} className="border border-solid pl-2 border-gray-900 rounded-md"/>
+          <input name="email" placeholder="Email" onChange={handleChange} className="border border-solid pl-2 border-gray-900 rounded-md"/>
+          <input type="password" name="password" placeholder="Password" onChange={handleChange} className="border border-solid pl-2 border-gray-900 rounded-md" />
+          <button type="submit" className="bg-yellow-300 rounded-lg m-auto px-5 py-1">Register</button>
+        </div>
       </form>
-      {message && <p>{message}</p>}
+      <div className=" my-2 mx-auto text-center text-xl">
+        {message && <p>{message}</p>}
+      </div>
     </div>
   );
 }
